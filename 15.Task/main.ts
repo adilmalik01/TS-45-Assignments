@@ -8,10 +8,11 @@
 
 let personal_Guest: Array<string> = ["Sir Zia Khan", "Sir Ameen Alam", "Okasha Bhai", "Sir Daniyal Naghori"]
 
+let whoCannotCome = personal_Guest.indexOf("Sir Zia Khan")
 // declare who is not come on dinner
-console.log(`${personal_Guest[0]}  can't come to dinner`);
+console.log(`${personal_Guest[whoCannotCome]}  can't come to dinner`);
 
-let replacing_Guest = personal_Guest.splice(0, 1, "Kamran Khan tessori") // adding new guest
+let replacing_Guest = personal_Guest.splice(whoCannotCome, 1, "Kamran Khan tessori") // adding new guest
 
 // console.log(personal_Guest);
 // console.log(replacing_Guest);
@@ -24,7 +25,7 @@ personal_Guest.forEach((guest) => {
 
 
 
-export default   personal_Guest;
+export default personal_Guest;
 
 
 
